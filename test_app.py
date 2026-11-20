@@ -9,7 +9,7 @@ class FlaskTestCase(unittest.TestCase):
     def test_home(self):
         response = self.client.get('/')
 
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 404)
         self.assertEqual(
             response.data.decode(),
             "Hello, DevOps!"
